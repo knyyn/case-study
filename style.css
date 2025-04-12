@@ -1,0 +1,687 @@
+/* ======================
+      スマホ用スタイル 
+ ====================== */
+
+  * {
+    box-sizing: border-box;
+    margin: 0 0 0 0;
+  }
+
+  body {
+    margin: 0 0 0 0;
+  }
+
+  a:link, a:visited, a:hover, a:active {
+    color: #fff9ec;
+    text-decoration: none;
+  }
+
+  .main_visual {
+    position: relative;
+    width: 70%;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+ /* 画面幅が600px以下のとき */
+ @media screen and (max-width: 600px) {
+
+  /* =============
+       ヘッダー
+  =============== */
+
+  header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    width: 100%;
+    height: 60px;
+    margin: 0 0 0 0;
+    z-index: 99;
+   }
+
+   .store_logo {
+    font-weight: bold;
+    color: #fff9ec;
+    font-size: 18px;
+    position: relative;
+    top: 12px;
+    text-decoration: none;
+    font-family: "Playfair Display",serif;
+   }
+
+   /* ハンバーガーメニュー */
+   .hamburger_open {
+    margin: 30px 0 30px 0;
+    width: 30px;
+   }
+
+   .ham_cercle {
+    position: absolute;
+    right: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 249, 236, 0.25) ;
+    top: 10px;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+   }
+
+   .ham_open {
+    display: block;
+    width: 50%;
+    height: 3px;
+    z-index: 100;
+    margin-top: 3px;
+    border-radius: 2px;
+    background-color: #fff9ec;
+    position: relative;
+    left: 12px;
+    top: 14px;
+
+  }
+
+  /* .list_nav_header {
+    display: none;
+  } */
+
+  /* ハンバーガーメニュー　中身 */
+  #nav_sp {
+    display:none;
+    background-color: #805320;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 85%;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .hamburger_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hamburger_close .ham_close_1 {
+    position: absolute;
+    top: 28px;
+    left: -40px;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    content: '';
+    transform: rotate(-45deg);
+    background-color: #fff9ec;
+    z-index: 100;
+  }
+
+  .hamburger_close .ham_close_2 {
+    position: absolute;
+    top: 28px;
+    left: -40px;
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    content: '';
+    transform: rotate(45deg);
+    z-index: 100;
+    background-color: #fff9ec;
+    z-index: 100;
+  }
+
+  .area_logo_header {
+    position: absolute;
+  }
+
+  .area_logo_header .store_logo {
+    margin: 15px;
+    color: #fff9ec;
+    top: 30px;
+    font-size: 25px;
+    left: 5px;
+    z-index: 100;
+  }
+
+  .list_nav_header {
+    position: absolute;
+    bottom: 10rem;
+    padding-left: 35px;
+  }
+
+  .list_nav_header > li {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: "Playfair Display",serif;
+    line-height: 2rem;
+  } 
+
+  /* ハンバーガーメニューの背景画像 */
+
+  .ham_img .ham_img1 {
+    max-width: 100%;
+    height: 120%;
+    top: 0;
+    opacity: 0.3;
+    z-index: 99;
+  }
+
+  /* ==================
+      メインビジュアル 
+  ==================== */
+
+  .main_visual {
+    width: 100%;
+    height: 150px;
+  }
+
+  .main_visual_pic1 {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main_visual_pic2 {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main_visual_pic3 {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 90%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .main_visual_pic1 {
+    background-image: url('wp-admin/images/barista.jpg');
+    animation: slide-animation-01 24s infinite;
+  }
+
+  .main_visual_pic2 {
+    background-image: url('wp-admin/images/shop-out.jpg');
+    animation: slide-animation-02 24s infinite;
+  }
+
+  .main_visual_pic3 {
+  background-image: url('wp-admin/images/lettuce\ \(2\).jpg');
+  animation: slide-animation-03 24s infinite;
+  }
+
+
+  @keyframes slide-animation-01 {
+    0% {opacity: 1; transform: scale(1.0);}
+    30% {opacity: 1;}
+    40% {opacity: 0; transform: scale(1.15);}
+    90% {opacity: 0}
+   100% {opacity: 1; transform: scale(1.0);}
+   }
+   @keyframes slide-animation-02 {
+    0% {opacity: 0;}
+    30% {opacity: 0; transform: scale(1.1);}
+    40% {opacity: 1;}
+    60% {opacity: 1;}
+    70% {opacity: 0; transform: scale(1.0);}
+   100% {opacity: 0;}
+   }
+
+   @keyframes slide-animation-03 {
+    0% {opacity: 0;}
+    60% {opacity: 0; transform: scale(1.0);}
+    70% {opacity: 1;}
+    90% {opacity: 1;}
+   100% {opacity: 0; transform: scale(1.1);}
+   }
+
+
+
+
+   
+
+  .main_visual_pic1 {
+    width: 100%;
+    background-color: #805320;
+  }
+
+  .main_pic {
+    max-width: 100%;
+  }
+
+  .concept_message .message_01 {
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 25px;
+    position: absolute;
+    right: 40px;
+    top: 75px;
+    color: #fff9ec;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.5em;
+  }
+
+  .concept_message .message_02 {
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 25px;
+    position: absolute;
+    right: 85px;
+    top: 150px;
+    color: #fff9ec;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.5em;
+  }
+
+  /* ==============
+    Enjoy organic 
+  ================ */
+
+  #content01 {
+    padding: 100px 30px 120px 30px;
+    background-color: #805320;
+  }
+
+  .title {
+    color: #fff9ec;
+    font-family: "Caveat","Playfair Display",serif;
+    font-size: 50px;
+    text-align: center;
+    font-weight: 200;
+    padding-bottom: 10px;
+  }
+
+  .sab_title {
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 15px;
+    text-align: center;
+    color: #fff9ec;
+    padding-top: 5px;
+  }
+
+  .messages {
+    padding: 30px 0;
+  }
+
+  .message_03 {
+    padding: 20px 0;
+    font-size: 16px;
+    letter-spacing: 3px;
+  }
+
+  .message_04 {
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 3px;
+    padding-bottom: 30px;
+  }
+
+  .button_content {
+    width: 270px;
+    height: 40px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+
+  .button_content a {
+    padding: 5px 0;
+  }
+
+  .button_message_01 {
+    color: #805320;
+    font-family: "Playfair Display",serif;
+    font-size: 15px;
+    padding: 10px 17px;
+  }
+
+  /* =============
+    Healthy Food 
+  ===============*/
+
+  #content02 {
+    padding: 80px 30px;
+    background-color: #C28643;
+  }
+
+  #content02 .title {
+    padding-bottom: 20px;
+  }
+
+  .pic_1 {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 30px 0;
+  }
+
+  .pic_2 {
+    width: 85%;
+    position: absolute;
+    opacity: 0.3;
+    left: 56px;
+    padding-top: 90px;
+  }
+
+
+  .button_content_02 {
+    width: 130px;
+    height: 40px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 5px;
+    margin: 0 0 0 auto;
+  }
+
+  .button_content a {
+    padding: 5px 0;
+  }
+
+  .button_message_02 {
+    color: #805320;
+    font-family: "Playfair Display",serif;
+    font-size: 15px;
+    padding: 10px 17px;
+
+  }
+
+  .messages {
+    padding-top: 40px;
+  }
+
+  /* =========
+      Blog 
+  ========== */
+
+  .cercle {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cercle_1 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff9ec;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+  }
+
+  .cercle_2 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff9ec;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
+  }
+
+  .blog_photo .pic_5 {
+    width: 100%;
+    display: inline;
+    padding: 20px 25px;
+  }
+
+  .blog_content {
+    /* font-size: 16px; */
+    padding: 0 25px;
+  }
+
+  .title_02 {
+    color: #fff9ec;
+    font-family: "Caveat","Playfair Display",serif;
+    font-size: 40px;
+    text-align: center;
+    border-bottom: solid 2px #fff9ec;
+    padding-bottom: 10px;
+  }
+
+  .button_content_01 {
+    width: 125px;
+    height: 40px;
+    background-color: #fff;
+    opacity: 1;
+    border-radius: 5px;
+    /* padding-right: 0; */
+  }
+
+  .button_content a {
+    padding: 5px 0;
+  }
+
+  .blog_contents {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 20px;
+    color: #fff9ec;
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 15px;
+  } 
+
+  .title_contents {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .blog_title {
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .message_05 {
+    border-bottom: solid 1px #fff9ec;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 14px;
+    letter-spacing: 3px;
+  }
+
+  .message_06 {
+    padding: 30px;
+    color: #fff9ec;
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+
+  /* ============
+    Recruitment
+  ============= */
+
+  .box {
+    margin: 30px 0;
+    background-color: #fff9ec;
+  }
+
+  .pic_3 {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .message_04_02 {
+    color: #805320;
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 15px;
+    padding: 20px 55px 10px 55px;
+    letter-spacing: 3px;
+  }
+
+  .message_05_02 {
+    color: #805320;
+    font-family: "YuKyokasho",sans-serif;
+    font-size: 15px;
+    padding: 10px 55px;
+    letter-spacing: 3px;
+  }
+
+  .message_05_02 span {
+    color: #805320;
+    font-family: "Playfair Display",serif;
+  }
+
+  .button_content_03 {
+    width: 130px;
+    height: 40px;
+    background-color: #805320;
+    opacity: 1;
+    border-radius: 5px;
+    margin: 0 55px 10px auto;
+  }
+
+  .button_content a {
+    padding: 5px 0;
+  }
+
+  .button_message_03 {
+    color: #fff9ec;
+    font-family: "Playfair Display",serif;
+    font-size: 15px;
+    padding: 10px 17px;
+  }
+
+  .messages_02 {
+    padding-bottom: 15px;
+
+  }
+
+  /* ================
+        Contact 
+  ================== */
+
+  .pic_4 {
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  .button_content_04 {
+    width: 270px;
+    height: 50px;
+    background-color: #fff9ec;
+    /* opacity: 1; */
+    border-radius: 5px;
+    margin: 20px auto;
+    padding: 14px 15px 0 15px;
+  }
+
+  .button_content_04 a {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .button_message_04 {
+    color: #805320;
+    font-family: "Playfair Display",serif;
+    font-size: 15px;
+    /* padding: 10px 17px; */
+  }
+
+
+  /* ==============
+       Footer 
+  ================ */
+
+  footer {
+    background-color: #805320;
+    color: #fff9ec;
+    font-family: "YuKyokasho",sans-serif;
+    padding: 30px 40px;
+  }
+
+  #footer_logo {
+    padding: 25px 0;
+  }
+
+  #footer_logo .store_logo {
+    font-size: 30px;
+  }
+
+  #footer_link {
+    display: block;
+    color: #fff9ec;
+    font-family: "Playfair Display",serif;
+    padding: 60px 0;
+  }
+
+  ul {
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    font-size: 18px;
+    padding-bottom: 15px;
+  }
+
+  .store_access_02 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .store_time {
+    padding-bottom: 20px;
+  }
+
+  .time {
+    padding-right: 24px;
+    padding-bottom: 20px;
+  }
+
+  .address_word {
+    padding-bottom: 20px;
+  }
+
+  .address {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .access_word {
+    padding-bottom: 20px;
+  }
+
+  .access {
+    padding-bottom: 20px;
+    padding-right: 40px;
+  }
+
+  .phone_number_word {
+    padding-bottom: 20px;
+  }
+
+  .phone_number {
+    padding-right: 105px;
+  }
+
+  .sns_footer {
+    padding: 50px 0;
+  }
+
+  .sns_btns img {
+    padding-right: 3px;
+  }
+
+  .store_access_03 .div_1 {
+    display: flex;
+    justify-content: space-between;
+  }
+
+ }
+
